@@ -13,4 +13,4 @@ class Module(object):
     def connected(self):
         resp = self.opener.open(self.test_url)
         self.login_page = resp
-        return resp.geturl() != self.test_url
+        return resp.geturl() == self.test_url
