@@ -3,8 +3,8 @@ import lxml.html
 import openwifi
 
 class AttWifi(openwifi.Module):
-    def login(resp):
-        doc = lxml.html.parse(resp)
+    def login(self):
+        doc = lxml.html.parse(self.login_page)
         form = doc.getroot().forms[0]
 
         form.fields['aupAgree'] = 1

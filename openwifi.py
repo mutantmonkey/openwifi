@@ -15,4 +15,9 @@ __author__ = "mutantmonkey <mutantmonkey@mutantmonkey.in>"
 __license__ = "ISC"
 
 if __name__ == '__main__':
-    attwifi.AttWifi()
+    n = attwifi.AttWifi()
+    if not n.connected():
+        n.login()
+        print("Connected.")
+    else:
+        print("You are already connected.")
