@@ -2,10 +2,10 @@ import urllib.request
 import lxml.html
 import openwifi
 
-class AttWifi(openwifi.Module):
+class AirportDEN(openwifi.Module):
     def login(self):
         doc = lxml.html.parse(self.login_page)
         form = doc.getroot().forms[0]
-        form.fields['aupAgree'] = 1
-        form.fields['connect'] = "Connect"
+        form.fields['agree'] = ''
+        form.fields['accept'] = "Continue"
         self.submit_form(form)

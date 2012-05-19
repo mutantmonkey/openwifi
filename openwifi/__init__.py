@@ -14,3 +14,7 @@ class Module(object):
         resp = self.opener.open(self.test_url)
         self.login_page = resp
         return resp.geturl() == self.test_url
+
+    def submit_form(self, form):
+        self.opener.open(form.action,
+                data=urllib.parse.urlencode(form.fields).encode('ascii'))
