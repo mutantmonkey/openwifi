@@ -15,4 +15,4 @@ Prerequisites
 Usage
 -----
 If you are using Arch Linux and netcfg, you can simply run this script as part
-of your `POST_UP` commands. Otherwise, just run this strip after connecting.
+of your `POST_UP` commands. Otherwise, just run it after connecting.
